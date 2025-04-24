@@ -1,0 +1,38 @@
+#footer{
+    background-color: transparent !important;
+}
+@media only screen and (min-width: 600px) {
+
+    #content{
+        width: 100%;
+        background-image: url(BBP-FONDO.jpeg) !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    #content .modal-dialog{
+        position: absolute;
+        left: 10%;
+        top: 110%;
+    }
+
+
+    .modal-content{
+        background-color: whitesmoke !important;
+        border: none !important;
+        padding: 0px !important;
+    }
+}
+
+@media only screen and (max-width: 599px){
+    #content{
+        width: 100%;
+        background-image: url(BBP-FONDO.jpeg) !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}

@@ -1,0 +1,42 @@
+/**video bg new**/
+.video-section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: table;
+    overflow: hidden;
+}
+
+.video-section .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.video-section .fs-background-container {
+    left: 0;
+}
+
+.video-section .video-overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    z-index: 2;
+}
+
+.video-section .video-overlay h1 {
+    color: #fff;
+}
+
+.video-section .video-overlay p {
+    color: #fff;
+}
